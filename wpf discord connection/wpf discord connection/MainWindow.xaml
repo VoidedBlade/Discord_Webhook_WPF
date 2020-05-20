@@ -1,0 +1,29 @@
+﻿<Window x:Class="wpf_discord_connection.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpf_discord_connection"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="946.939">
+    <Grid>
+        <Label Content="Webhook URLs" HorizontalAlignment="Left" Height="26" Margin="10,72,0,0" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="Username" HorizontalAlignment="Left" Height="23" Margin="10,41,0,0" TextWrapping="Wrap" Text="Random Bot name" VerticalAlignment="Top" Width="167"/>
+        <Label Content="Username" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" VerticalAlignment="Top" Width="110"/>
+        <Label  Content="Embed image URLs" HorizontalAlignment="Left" Height="29" Margin="192,69,0,0" VerticalAlignment="Top" Width="180"/>
+        <Label Content="Chat message" HorizontalAlignment="Left" Height="26" Margin="390,10,0,0" VerticalAlignment="Top" Width="134"/>
+        <TextBox MaxLength="2000" AcceptsReturn="True" x:Name= "ChatMessage" HorizontalAlignment="Left" Height="272" Margin="390,41,0,0" TextWrapping="Wrap" Text="What a wonderful day" VerticalAlignment="Top" Width="533"/>
+        <Button Click="SendSelected" Content="Send to Webhooks" HorizontalAlignment="Left" Height="43" Margin="526,356,0,0" VerticalAlignment="Top" Width="271"/>
+        <ListBox x:Name="ImageBox" HorizontalAlignment="Left" Height="210" Margin="192,103,0,0" VerticalAlignment="Top" Width="180"/>
+        <ListBox x:Name="WebhookBox" HorizontalAlignment="Left" Height="210" Margin="10,103,0,0" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="webhookName" HorizontalAlignment="Left" Height="23" Margin="10,327,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="webhookUrl" HorizontalAlignment="Left" Height="23" Margin="10,355,0,0" TextWrapping="Wrap" Text="URL" VerticalAlignment="Top" Width="167"/>
+        <Button Click="Add_webhook" Content="Add webhook" HorizontalAlignment="Left" Height="28" Margin="10,383,0,0" VerticalAlignment="Top" Width="167"/>
+        <TextBox x:Name="ImageName" HorizontalAlignment="Left" Height="23" Margin="192,327,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="180"/>
+        <TextBox x:Name="ImageUrl" HorizontalAlignment="Left" Height="23" Margin="192,355,0,0" TextWrapping="Wrap" Text="URL" VerticalAlignment="Top" Width="180"/>
+        <Button Click="Add_Image" Content="Add Image" HorizontalAlignment="Left" Height="28" Margin="192,383,0,0" VerticalAlignment="Top" Width="180"/>
+        <TextBox x:Name="BotImage" HorizontalAlignment="Left" Height="23" Margin="192,41,0,0" TextWrapping="Wrap" Text="Bot image URL" VerticalAlignment="Top" Width="167"/>
+        <Label Content="Bot photo" HorizontalAlignment="Left" Height="26" Margin="192,10,0,0" VerticalAlignment="Top" Width="110"/>
+
+    </Grid>
+</Window>
