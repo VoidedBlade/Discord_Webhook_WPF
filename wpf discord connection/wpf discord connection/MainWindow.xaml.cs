@@ -42,7 +42,12 @@ namespace wpf_discord_connection
             ImageBox.ItemsSource = ImageButtons;
         }
 
-
+        /// <summary>
+        /// Generates the data from all the fields that have been input to be sent over
+        /// </summary>
+        /// <param name="_Username"></param>
+        /// <param name="_Message"></param>
+        /// <returns></returns>
         private DiscorData EmbedChecker(string _Username, string _Message)
         {
             Dictionary<string, string> _Links = new Dictionary<string,string>();
@@ -105,6 +110,11 @@ namespace wpf_discord_connection
                 
             }
         }
+        /// <summary>
+        /// Adds a webhook using the click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Add_webhook(object sender, RoutedEventArgs e)
         {
             if (webhookUrl.Text.ToLower().Contains("https://"))
