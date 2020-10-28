@@ -90,7 +90,11 @@ namespace wpf_discord_connection
 
             return _data;
         }
-
+        /// <summary>
+        /// sends over the data to the selected webhooks
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SendSelected(object sender, RoutedEventArgs e)
         {
             using (WebClient _webClient = new WebClient())
@@ -141,7 +145,11 @@ namespace wpf_discord_connection
                 webhookUrl.Text = "URL";
             }
         }
-
+        /// <summary>
+        /// adds an image to to embed in the sent object
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Add_Image(object sender, RoutedEventArgs e)
         {
             if (ImageUrl.Text.ToLower().Contains("https://"))
@@ -168,13 +176,21 @@ namespace wpf_discord_connection
                 ImageUrl.Text = "URL";
             }
         }
-
+        /// <summary>
+        /// removes the selected webhook
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RemoveWebhook(object sender, RoutedEventArgs e)
         {
             Webhooks.Remove(((Button)sender).Name);
             WebhookButtons.Remove((Button)sender);
         }
-
+        /// <summary>
+        /// removes the selected image
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RemoveImage(object sender, RoutedEventArgs e)
         {
             Images.Remove(((Button)sender).Name);
